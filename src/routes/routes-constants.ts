@@ -1,5 +1,5 @@
 export const Routes = {
   App: "/app",
-  Product: "/app/product",
-  ProductDetails: "/app/product/details",
+  Product: "/app/products",
+  ProductDetails: "/app/products/details",
 };

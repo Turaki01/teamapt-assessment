@@ -5,18 +5,21 @@ import styles from "./Footer.module.scss";
 const Footer = () => {
   return (
     <footer
-    className={`bg-[#fff]
+      className={`bg-[#fff]
     text-3xl text-white text-center
     fixed
     inset-x-0
     bottom-0
-    h-[70px] ${styles.footerContainer}`}
+    h-[85px] ${styles.footerContainer}`}
     >
-      <div className="flex justify-between items-center px-4 h-full">
+      <div className="flex justify-between items-center px-6 h-full">
         {MenuList.map((menu, index: number) => (
-          <p className="text-[13px] text-[#6a6e77]" key={menu.name + index}>
-            {menu.name}
-          </p>
+          <div key={menu.name + index} className="flex flex-col items-center">
+            {menu.icon}
+            <p className="text-[13px] text-[#6a6e77]" >
+              {menu.name}
+            </p>
+          </div>
         ))}
       </div>
     </footer>
