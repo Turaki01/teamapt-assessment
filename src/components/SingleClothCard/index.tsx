@@ -3,6 +3,7 @@ import { FcLike } from "react-icons/fc";
 import { AiFillStar } from "react-icons/ai";
 import styles from "./SingleClothCard.module.scss";
 import { IProductObject } from "interfaces/product";
+import { Routes } from "routes/routes-constants";
 
 
 const SingleClothCard: React.FC<IProductObject> = ({
@@ -13,8 +14,11 @@ const SingleClothCard: React.FC<IProductObject> = ({
     category,
     image
 }) => {
+  const navigateToProductDetails = () => {
+    window.location.replace(Routes.ProductDetails);
+  };
   return (
-    <div className={styles.cardContainer}>
+    <div className={styles.cardContainer} onClick={navigateToProductDetails}>
       <div className="bg-cover h-[140px] bg-no-repeat relative rounded-tl-[10px] rounded-tr-[10px]" style={{ backgroundImage: `url(${image})` }}>
         <div className="absolute right-[8px] top-[8px]">
         <FcLike />

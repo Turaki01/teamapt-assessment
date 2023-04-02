@@ -1,4 +1,4 @@
-import Header from "components/Header";
+import CategoryComponent from "components/CategoryComponent";
 import SingleClothCard from "components/SingleClothCard";
 import { motion, useScroll, useSpring } from "framer-motion";
 import React from "react";
@@ -18,15 +18,19 @@ const Home = () => {
   };
   return (
     <>
-      <Header />
       <div className="px-4">
         <motion.div style={{ scaleX }} />
+
+        <CategoryComponent />
+
         <div className="flex justify-between">
           <h4 className="text-[#363644] text-[19px] font-bold">
             Best Sale Product
           </h4>
 
-          <p className="text-[#429581]" onClick={navigateToAllProducts}>See more</p>
+          <p className="text-[#429581]" onClick={navigateToAllProducts}>
+            See more
+          </p>
         </div>
         <div className="grid grid-cols-2 gap-4">
           {ListOfProducts.splice(0, 5).map((product, index) => (
