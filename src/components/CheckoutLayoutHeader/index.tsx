@@ -3,16 +3,15 @@ import styles from "../Header/Header.module.scss";
 import { FaChevronLeft } from "react-icons/fa";
 import { FcLike } from "react-icons/fc";
 import { RiShareLine, RiShoppingBasketLine } from "react-icons/ri";
+import { useHistory } from "react-router";
 
 const CheckoutLayoutHeader = () => {
-  const onBackFunction = () => {
-    window.history.back();
-  };
+  const history = useHistory();
 
   return (
     <header className={styles.headerContainer}>
       <div className="flex py-3 items-center justify-between w-full">
-        <FaChevronLeft color="#464757" onClick={onBackFunction} />
+        <FaChevronLeft color="#464757" onClick={() => history.goBack()} />
 
         <div className="flex items-center">
           <FcLike size={22} />

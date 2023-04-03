@@ -1,5 +1,4 @@
 import FadeInAnimation from "components/Animation/FadeInContainer";
-import Header from "components/Header";
 import SingleClothCard from "components/SingleClothCard";
 import { motion, useScroll, useSpring } from "framer-motion";
 import React from "react";
@@ -14,7 +13,6 @@ const Product = () => {
   });
   return (
     <>
-    <Header />
       <div className="px-4 mt-8">
         <motion.div style={{ scaleX }} />
         <FadeInAnimation yOffset={64} duration={1}>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 
 interface FadeInAnimationProps {
-  children: any;
+  children: React.ReactNode;
   yOffset: number;
   easing?: number[];
   duration?: number;

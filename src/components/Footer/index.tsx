@@ -3,6 +3,10 @@ import { MenuList } from "routes/MenuList";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
+  const onMenuNavigation = (path: string) => {
+    window.location.replace(path);
+  };
+
   return (
     <footer
       className={`bg-[#fff]
@@ -14,11 +18,9 @@ const Footer = () => {
     >
       <div className="flex justify-between items-center px-6 h-full">
         {MenuList.map((menu, index: number) => (
-          <div key={menu.name + index} className="flex flex-col items-center">
+          <div key={menu.name + index} onClick={() => onMenuNavigation(menu.path || "")} className="flex flex-col items-center">
             {menu.icon}
-            <p className="text-[13px] text-[#6a6e77]" >
-              {menu.name}
-            </p>
+            <p className="text-[13px] text-[#6a6e77]">{menu.name}</p>
           </div>
         ))}
       </div>

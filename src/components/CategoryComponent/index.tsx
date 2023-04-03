@@ -5,7 +5,7 @@ import { BsAirplane, BsClipboardMinus, BsGlobe } from "react-icons/bs";
 
 const CategoryComponent = () => {
   return (
-    <div className="bg-[#fff] pt-3 pb-5 mb-10">
+    <div className="bg-[#fff] pt-5 pb-5 mb-10">
       <div className="grid grid-cols-5 gap-2">
         <div className="w-[50px] h-[50px]">
           <div className="w-[50px] h-[50px] bg-[#f6f6f6] flex justify-center items-center">
